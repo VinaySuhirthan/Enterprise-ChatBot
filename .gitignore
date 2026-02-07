@@ -1,0 +1,74 @@
+# # ===============================
+# # Python
+# # ===============================
+# __pycache__/
+# *.py[cod]
+# *.pyo
+# *.pyd
+
+# # Virtual environment
+# venv/
+# .env/
+
+# # ===============================
+# # Secrets & Config (CRITICAL)
+# # ===============================
+# smtp_config.py
+# *.env
+# .env.*
+# secrets/
+# credentials/
+
+# # ===============================
+# # Hugging Face / ML cache
+# # ===============================
+# .cache/
+# .huggingface/
+# torch_cache/
+# sentence_transformers_cache/
+
+# # ===============================
+# # FAISS / Vector Stores (optional)
+# # ===============================
+# *.faiss
+# *.index
+# vector_store/
+
+# # ===============================
+# # Logs
+# # ===============================
+# *.log
+# logs/
+
+# # ===============================
+# # OS / Editor junk
+# # ===============================
+# .DS_Store
+# Thumbs.db
+# .vscode/
+# .idea/
+
+# # ===============================
+# # Ollama (DO NOT COMMIT MODELS)
+# # ===============================
+# .ollama/
+
+# # ===============================
+# # Test artifacts
+# # ===============================
+# tests/__pycache__/
+
+# # ===============================
+# # Temporary files
+# # ===============================
+# tmp/
+# temp/
+
+venv/
+__pycache__/
+.env
+*.db
+*.index
+*.faiss
+models/
+data/
