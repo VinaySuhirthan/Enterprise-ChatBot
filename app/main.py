@@ -1,5 +1,8 @@
 from dotenv import load_dotenv
 load_dotenv()
+from pydantic import BaseModel
+
+from fastapi.middleware.cors import CORSMiddleware
 
 from fastapi import FastAPI
 from fastapi import Depends
@@ -27,6 +30,14 @@ from app.nlp.summarizer import summarize_chunks
 
 
 app = FastAPI(title="Enterprise AI Chatbot")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 app.include_router(auth_router)
 
 embedding_model = EmbeddingModel.load()
@@ -88,8 +99,12 @@ def semantic_search(query: str):
         "results": results
     }
 
+class ChatRequest(BaseModel):
+    question: str
+
 @app.post("/chat")
-def chat(query: str):
+def chat(req: ChatRequest):
+    query = req.question
     query_embedding = EmbeddingModel.embed_texts([query])[0]
     context_chunks = vector_store.search(query_embedding, top_k=3)
 
