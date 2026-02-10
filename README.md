@@ -3,7 +3,7 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 
 The **Enterprise AI Chatbot** is a secure, AI-powered assistant designed to help employees of large organizations quickly access information from internal documents such as HR policies, IT manuals, and organizational guidelines.
 
@@ -13,34 +13,34 @@ This project demonstrates a real-world **enterprise-ready AI chatbot** using mod
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
-- 🔐 **Secure Authentication**
+- **Secure Authentication**
   - Email & password login
   - Email-based OTP (2FA)
   - JWT-based session management
 
-- 📄 **Document Upload from UI**
+- **Document Upload from UI**
   - Upload PDF documents directly from the chat interface
   - Automatic text extraction, chunking, and embedding
 
-- 💬 **Context-Aware Chat (RAG)**
+- **Context-Aware Chat (RAG)**
   - Answers strictly based on uploaded documents
   - Semantic search + LLM (Retrieval-Augmented Generation)
   - Prevents hallucinations outside document scope
 
-- 📝 **Document Summarization**
+- **Document Summarization**
   - One-click summarization of uploaded documents
 
-- 🛡️ **Content Safety**
+- **Content Safety**
   - Profanity filtering middleware
   - Blocks inappropriate language at API level
 
-- 💾 **Session Persistence**
+- **Session Persistence**
   - Chat history preserved on refresh
   - OTP and login state handled gracefully
 
-- 🌐 **Scalable Design**
+- **Scalable Design**
   - Stateless APIs
   - Supports multiple concurrent users
   - Response time under 5 seconds
@@ -62,7 +62,7 @@ Backend (FastAPI)
    ├── Vector Store (Semantic Search)
    └── LLM (Local / Open-Source)
 ```
-
+---
 ## Technology Stack (100% Free & Open Source)
 
 ### Frontend
@@ -101,7 +101,7 @@ Email OTP (SMTP)
 
 Profanity filtering middleware
 ```
-
+---
 ## Project Structure
 ```
 Enterprise-ChatBot/
@@ -119,7 +119,7 @@ Enterprise-ChatBot/
 │
 └── enterprise-chatbot-ui/ # React frontend
 ```
-
+---
 ## Setup Instructions
 
 ### Clone the Repository
@@ -133,7 +133,7 @@ python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
-  Create a .env file:
+ **Create a .env file:**
   ```
   EMAIL_HOST=smtp.gmail.com
   EMAIL_PORT=465
@@ -141,11 +141,11 @@ pip install -r requirements.txt
   EMAIL_PASSWORD=your_app_password
   JWT_SECRET_KEY=your_secret_key
   ```
-  Run backend:
+ **Run backend:**
   ```
   uvicorn app.main:app --reload
   ```
-  Backend runs at:
+ **Backend runs at:**
   ```
   http://127.0.0.1:8000
   ```
@@ -155,7 +155,7 @@ cd enterprise-chatbot-ui
 npm install
 npm run dev
 ```
-  Frontend runs at:
+ - **Frontend runs at:**
     ```
     http://localhost:5173
     ```
@@ -174,55 +174,54 @@ npm run dev
 6. Logout securely
 
 ### User Management (Demo Note) :
-  1. For demonstration purposes, users are pre-configured in the backend .
-  2. In a production environment, this system can be easily extended to support:
-```
-User registration
-Database-backed user storage
-Enterprise SSO / LDAP integration
-```
+For demonstration purposes, users are pre-configured in the backend .
+- **In a production environment, this system can be easily extended to support:**
+- User registration
+- Database-backed user storage
+- Enterprise SSO / LDAP integration
+
 
 ## AI Design Philosophy
-The chatbot does not hallucinate
+- The chatbot does not hallucinate
 
-All responses are grounded in uploaded documents
+- All responses are grounded in uploaded documents
 
-Semantic similarity ensures relevant context retrieval
+- Semantic similarity ensures relevant context retrieval
 
-The LLM is used only for generation, not knowledge storage
+- The LLM is used only for generation, not knowledge storage
 
 ## Scalability & Performance
-Stateless API design
+- Stateless API design
 
-Lightweight embeddings
+- Lightweight embeddings
 
-Efficient vector search
+- Efficient vector search
 
-Suitable for handling multiple concurrent users
+- Suitable for handling multiple concurrent users
 
-Average response time under 5 seconds
+- Average response time under 5 seconds
 
 ## Security Considerations
-JWT-secured endpoints
+- JWT-secured endpoints
 
-OTP-based second-factor authentication
+- OTP-based second-factor authentication
 
-Profanity filtering at middleware level
+- Profanity filtering at middleware level
 
-No sensitive data exposed to frontend
+- No sensitive data exposed to frontend
 
 ## Conclusion
 This project demonstrates a production-inspired enterprise AI chatbot combining secure authentication, document intelligence, and modern NLP techniques.
 
-It is suitable for:
+**It is suitable for:**
 
- . Hackathon submissions
+ - Hackathon submissions
   
- . Academic demonstrations
+ - Academic demonstrations
   
- . Enterprise proof-of-concepts
+ - Enterprise proof-of-concepts
   
- . Resume and portfolio showcase
+ - Resume and portfolio showcase
   
 ## License
 This project is intended for educational and demonstration purposes.
